@@ -1,0 +1,191 @@
+extends common/_base
+
+
+
+block breadcrumbs
+
+
+  // breadcrumbs
+  +breadcrumbs('Главная', 'Home & Garden', 'Бытовые пылесосы', 'Пылесос с аквафильтром Karcher DS 6.000 Mediclean')
+
+
+  // back
+  +back('Бытовые пылесосы')
+
+
+
+block content
+
+
+
+  // page header
+  div(class="page-header")
+    div(class="page-header__inner container")
+
+
+      // title
+      h1(class="page-header__title") Пылесос с водяным фильтром
+
+
+      // desc
+      div(class="page-header__desc")
+        p Высочайшая сила всасывания и многоступенчатая система фильтрации, реализованная в пылесосе DS 6000 Mediclean, делают воздух в помещении до 99,99% чище. Аллергики могут вздохнуть спокойно! Пылесос с аквафильтром DS 6.000 Mediclean рекомендован Российской Ассоциацией Аллергологов и Клинических иммунологов (РААКИ).
+
+
+  div(class="container")
+
+
+    // product card
+    div(class="p-card")
+
+
+      // gallery
+      div(class="p-card__gallery js-gallery")
+
+
+        // picture
+        div(class="p-card__gallery-pic js-gallery__pic")
+          img(src="images/gallery/1.jpg" alt="" class="is-current")
+          img(src="images/gallery/2.jpg" alt="")
+          img(src="images/gallery/3.jpg" alt="")
+          img(src="images/gallery/4.jpg" alt="")
+
+          a(href="" class="p-card__gallery-zoom" title="Увеличить изображение")
+            +icon('zoom-plus')
+
+
+        // thumbs
+        ul(class="p-card__gallery-thumbs")
+
+
+          // item
+          li(class="p-card__gallery-thumb is-current js-gallery__thumb")
+            img(src="images/gallery/thumbs/1.jpg" alt="")
+
+
+          // item
+          li(class="p-card__gallery-thumb js-gallery__thumb")
+            img(src="images/gallery/thumbs/2.jpg" alt="")
+
+
+          // item
+          li(class="p-card__gallery-thumb js-gallery__thumb")
+            img(src="images/gallery/thumbs/3.jpg" alt="")
+
+
+          // item
+          li(class="p-card__gallery-thumb js-gallery__thumb")
+            img(src="images/gallery/thumbs/4.jpg" alt="")
+
+
+
+      // body
+      div(class="p-card__body")
+
+
+        // title
+        div(class="p-card__title")
+
+          div(class="p-card__badge badge") хит
+
+
+          // availability
+          div(class="p-card__availability availability")
+            +icon('check')
+            | В наличии
+
+
+          // name
+          div(class="p-card__name") Karcher DS 6.000 Mediclean
+
+
+
+        // voice
+        div(class="p-card__voice")
+
+
+          // rating
+          form(action="" method="post" class="p-card__rating rating js-rating" autocomplete="off")
+
+
+            // controls
+            fieldset(class="rating__inner js-rating__fieldset")
+              div(class="rating__controls")
+                input(type="radio" id="s5" value="5" name="rating")
+                label(for="s5")
+                input(type="radio" id="s4" value="4" name="rating")
+                label(for="s4")
+                input(type="radio" id="s3" value="3" name="rating")
+                label(for="s3")
+                input(type="radio" id="s2" value="2" name="rating")
+                label(for="s2")
+                input(type="radio" id="s1" value="1" name="rating")
+                label(for="s1")
+
+
+            // counter
+            div(class="rating__counter") (3)
+
+
+
+          // create comment
+          div(class="p-card__comment")
+            a(href="" class="action-link")
+              span(class="action-link__text") Оставить отзыв
+              +icon('commenting')
+
+
+
+        // price
+        div(class="p-card__price")
+
+
+          // buy
+          a(href="" class="p-card__buy price")
+            span(class="price__value") 21 190 руб.
+            +icon('basket')
+
+
+          // actions
+          ul(class="p-card__actions")
+
+
+            // item
+            li(class="p-card__actions-item")
+              a(href="" class="action-link")
+                span(class="action-link__text") В избранное
+                +icon('heart')
+
+
+            // item
+            li(class="p-card__actions-item")
+              a(href="" class="action-link")
+                span(class="action-link__text") Сравнить
+                +icon('files')
+
+
+        // desc
+        div(class="p-card__desc")
+          p Подробные <a href="" class="link link--pseudo"><b>условия доставки</b></a> и <a href="" class="link link--pseudo"><b>оплаты</b></a>.
+          p
+            a(href="" class="link link--pseudo")
+              b Гарантия на бытовую технику 5 лет!
+          p Качественная чистка полов, ковровых покрытий и мягкой мебели. Благодаря  дополнительному фильтру  HEPA 13 очищается воздух в помещении от мелких частиц пыли, спор и пыльцы, вызывающих аллергию, а система Perma Power увлажняет его. Легкий, удобный в эксплуатации. Рекомендован для использования в медицинских учреждениях.
+          p 
+            b Артикул:
+            |  1.195-202.0
+
+
+    hr
+
+
+
+    // text
+    div(class="u-muted")
+      p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio doloribus sed esse veritatis reiciendis voluptatibus! Provident molestiae tempora neque corrupti voluptatum, soluta quam cupiditate, sunt doloribus dolores doloremque praesentium nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cumque numquam ipsum nesciunt. Sed eos voluptatibus obcaecati totam ad culpa nesciunt, ea architecto omnis voluptatem iure aut nostrum consequatur enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consequuntur voluptatibus est modi accusantium odio. Dicta in dignissimos illo quasi? Voluptatibus quaerat nesciunt dolores ut quisquam! Reiciendis, ullam? Sequi, earum.
+
+      p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio doloribus sed esse veritatis reiciendis voluptatibus! Provident molestiae tempora neque corrupti voluptatum, soluta quam cupiditate, sunt doloribus dolores doloremque praesentium nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cumque numquam ipsum nesciunt. Sed eos voluptatibus obcaecati totam ad culpa nesciunt, ea architecto omnis voluptatem iure aut nostrum consequatur enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consequuntur voluptatibus est modi accusantium odio. Dicta in dignissimos illo quasi? Voluptatibus quaerat nesciunt dolores ut quisquam! Reiciendis, ullam? Sequi, earum.
+
+      p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio doloribus sed esse veritatis reiciendis voluptatibus! Provident molestiae tempora neque corrupti voluptatum, soluta quam cupiditate, sunt doloribus dolores doloremque praesentium nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cumque numquam ipsum nesciunt. Sed eos voluptatibus obcaecati totam ad culpa nesciunt, ea architecto omnis voluptatem iure aut nostrum consequatur enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consequuntur voluptatibus est modi accusantium odio. Dicta in dignissimos illo quasi? Voluptatibus quaerat nesciunt dolores ut quisquam! Reiciendis, ullam? Sequi, earum.
+
+      p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio doloribus sed esse veritatis reiciendis voluptatibus! Provident molestiae tempora neque corrupti voluptatum, soluta quam cupiditate, sunt doloribus dolores doloremque praesentium nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cumque numquam ipsum nesciunt. Sed eos voluptatibus obcaecati totam ad culpa nesciunt, ea architecto omnis voluptatem iure aut nostrum consequatur enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consequuntur voluptatibus est modi accusantium odio. Dicta in dignissimos illo quasi? Voluptatibus quaerat nesciunt dolores ut quisquam! Reiciendis, ullam? Sequi, earum.

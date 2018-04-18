@@ -1,0 +1,69 @@
+/*--------------------------------------------------*\
+  =Functions
+\*--------------------------------------------------*/
+
+
+
+/**
+ * Gets the color value
+ */
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+
+
+/**
+ * Gets the font family
+ */
+
+@function font($key) {
+  @return map-get($fonts, $key);
+}
+
+
+
+/**
+ * Get the typography settings
+ */
+
+@function typ($key) {
+  @return map-get($typography, $key);
+}
+
+
+
+/**
+ * Gets the heading size
+ */
+
+@function heading($key) {
+  @return map-get($headings, $key);
+}
+
+
+
+/**
+ * Gets the breakpoint width
+ */
+
+@function bp($key) {
+  @return map-get($breakpoints, $key);
+}
+
+
+
+/**
+ * Convert pixels to ems
+ */
+
+@function em($px, $base-font-size: typ('font-size')) {
+  @if unitless($px) {
+      @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+      @return em($px * 1px, $base-font-size);
+  } @else if unit($px) == em {
+      @return $px;
+  }
+  @return ($px / $base-font-size) * 1em;
+}

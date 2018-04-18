@@ -1,0 +1,65 @@
+/*--------------------------------------------------*\
+  =Buttons
+\*--------------------------------------------------*/
+
+.btn {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  padding: .75em 1.25em;
+  font-size: 12px;
+  background: none;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  margin: 0;
+  overflow: visible;
+  border-radius: 0;
+  font-family: font('base');
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+  &[disabled],
+  &.is-disabled {
+    opacity: .5;
+  }
+
+
+
+  /**
+   * Modifiers
+   */
+
+  &--expand {
+    width: 100%;
+  }
+
+  &--primary {
+    color: color('text');
+    background-color: color('brand');
+
+    &:not([disabled]):not(.is-disabled) {
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: color('text');
+        background-color: color('brand-light');
+      }
+
+    }
+
+  }
+
+}

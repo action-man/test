@@ -1,0 +1,74 @@
+/*--------------------------------------------------*\
+  =Toggle Catalog
+\*--------------------------------------------------*/
+
+.toggle-catalog {
+  position: relative;
+  display: block;
+  padding: .8125em 2.8125em .8125em 1.25em;
+  background-color: color('muted-light');
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: inherit;
+  
+  &:hover {
+    background-color: color('brand');
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    @include size(0);
+    border-top: 6px solid color('text');
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+  }
+
+  &.is-active {
+    background-color: color('brand');
+
+    &:before {
+      transform: rotate(-90deg);
+    }
+
+  }
+
+  .header__catalog-btn & {
+    font-size: 13px;
+  }
+
+  .header__nav & {
+    padding: 11px 10px;
+    padding-right: 28px;
+    font-size: 13px;
+    text-transform: none;
+
+    &:before {
+      right: 9px;
+    }
+
+  }
+
+
+
+  /**
+   * MQ
+   */
+  
+  @include mq(tablet) {
+
+    &:before {
+      right: 19px;
+    }
+
+    .header__catalog-btn & {
+      font-size: 16px;
+    }
+
+  }
+
+}

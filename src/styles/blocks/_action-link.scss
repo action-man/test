@@ -1,0 +1,38 @@
+/*--------------------------------------------------*\
+  =Action
+\*--------------------------------------------------*/
+
+.action-link {
+  display: inline-block;
+  position: relative;
+  padding: 2px 0 2px 28px;
+  color: color('text');
+
+  &:hover {
+    color: color('muted-dark');
+  }
+
+
+
+  /**
+   * Elements
+   */
+
+  &__text {
+    border-bottom: 1px dashed;
+    text-transform: uppercase;
+    font-weight: bold;
+    @include typi('small');
+    white-space: nowrap;    
+  }
+
+  .icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+    transition: none;
+    @include size(20px);
+  }
+
+}

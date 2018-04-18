@@ -1,0 +1,57 @@
+/*--------------------------------------------------*\
+  =Burger
+\*--------------------------------------------------*/
+
+$burger-layer-width: 24px;
+$burger-layer-height: 3px;
+$burger-layer-space: 3px;
+$burger-layer-rounding: 2px;
+$burger-layer-offset-hover: -2px;
+$burger-color: color('muted-dark');
+
+
+
+.burger {
+  display: block;
+  position: relative;
+  padding: 0;
+  @include size($burger-layer-width, $burger-layer-height * 3 + $burger-layer-space * 2);
+  cursor: pointer;
+
+
+
+  /**
+   * Elements
+   */
+
+  &__inner {
+    display: block;
+    top: 50%;
+    margin-top: $burger-layer-height / -2;
+
+    &,
+    &:before,
+    &:after {
+      position: absolute;
+      @include size($burger-layer-width, $burger-layer-height);
+      background-color: $burger-color;
+      border-radius: $burger-layer-rounding;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+    }
+
+    &:before {
+      top: ($burger-layer-space + $burger-layer-height) * -1;
+    }
+
+    &:after {
+      bottom: ($burger-layer-space + $burger-layer-height) * -1;
+    }
+
+  }
+
+}

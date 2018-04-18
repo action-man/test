@@ -1,0 +1,52 @@
+/*--------------------------------------------------*\
+  =Back
+\*--------------------------------------------------*/
+
+.back {
+  display: block;
+  font-size: 12px;
+
+
+
+  /**
+   * Elements
+   */
+
+  &__inner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__link {
+    position: relative;
+    padding: 0 0 0 20px;
+    border-bottom: 1px solid lighten(color('muted'), 25%);
+    color: color('muted-dark');
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:hover {
+      color: color('text');
+    }
+
+    .icon {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -0.5em;
+    }
+
+  }
+
+
+
+  /**
+   * MQ
+   */
+  
+  @include mq(phablet) {
+    display: none;
+  }
+
+}

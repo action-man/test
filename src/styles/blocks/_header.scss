@@ -1,0 +1,345 @@
+/*--------------------------------------------------*\
+  =Header
+\*--------------------------------------------------*/
+
+.header {
+  background-color: white;
+
+
+
+  /**
+   * Elements
+   */
+
+  &__inner {
+
+  }
+
+  &__top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: color('muted-light');
+    border-bottom: 1px solid color('muted');
+
+    &.is-fixed {
+      position: fixed;
+      width: 100%;
+      background-color: black;
+      border-bottom-color: white;
+      z-index: 11;
+
+      .header__top-inner {
+        padding-top: 9px;
+        padding-bottom: 9px;
+      }
+
+      .header__burger {
+
+        .burger__inner,
+        .burger__inner:before,
+        .burger__inner:after {
+          background-color: white;
+        }
+
+      }
+
+      .header__account {
+        display: none;
+      }
+
+      .header__top-actions {
+        display: block;
+      }
+
+    }
+
+  }
+
+  &__top-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+
+  &__top-actions {
+    display: none;
+  }
+
+  &__company-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__logo {
+    width: 220px;
+    margin-bottom: 20px;
+  }
+
+  &__address,
+  &__worktime,
+  &__contacts {
+    position: relative;
+    padding-left: 35px;
+
+    .icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include size(26px);
+      fill: color('muted');
+    }
+
+  }
+
+  &__address,
+  &__worktime {
+    display: none;
+  }
+
+  &__contacts {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  &__contacts-phone {
+    text-decoration: none;
+  }
+
+  &__contacts-callback {
+    position: relative;
+    display: inline-block;
+    padding: 7px 11px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: color('brand');
+    margin-top: 10px;
+
+    &:hover {
+      background-color: color('brand-light');
+
+      &:before {
+        border-bottom-color: color('brand-light');
+      }
+
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -4px;
+      margin: auto;
+      @include size(0);
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 4px solid #ffec00;
+      transition: border-bottom-color $transition-base;
+    }
+
+  }
+
+
+  &__catalog {
+    border-top: 3px solid color('muted-light');
+    border-bottom: 2px solid color('muted-light');
+  }
+
+  &__catalog-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__catalog-btn {
+    
+  }
+
+  &__search {
+    width: 100%;
+    margin: 15px auto;
+    order: 1;
+  }
+
+  &__burger {
+    display: block;
+    margin-right: 15px;
+  }
+
+
+
+  /**
+   * MQ
+   */
+
+  @include mq($until: $staticMenuShow) {
+
+    &__nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 90%;
+      max-width: 350px;
+      z-index: 10;
+      transform: translateX(-120%);
+      transition: transform .8s cubic-bezier(.23,1,.32,1);
+      box-shadow: 0 0 12px rgba(0, 0, 0, .25);
+
+      .is-menu-open & {
+        transform: translateX(0%);
+      }
+
+      .nav__item--catalog {
+        display: none;
+      }
+
+    }
+
+    &__nav-overlay {
+      @include overlay;
+
+      .is-menu-open & {
+        @include overlay-active;
+      }
+
+    }
+
+  }
+
+
+
+  @include mq(smart) {
+
+    &__company-inner {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    &__logo {
+      margin-bottom: 0;
+    }
+
+    &__address,
+    &__worktime,
+    &__contacts {
+      margin-left: 25px;
+    }
+
+  }
+
+  @include mq(tablet) {
+
+    &__logo {
+      width: 260px;
+    }
+
+    &__address {
+      display: block;
+    }
+
+    &__catalog-inner {
+      flex-wrap: nowrap;
+    }
+
+    &__search {
+      order: inherit;
+      max-width: 400px;
+      margin: 0 30px;
+    }
+
+  }
+
+  @include mq($staticMenuShow) {
+
+    &__top {
+
+      &.is-fixed {
+
+        .header__top-inner {
+          padding-bottom: 0;
+          padding-top: 0;
+        }
+
+        .header__nav {
+
+          .nav__link {
+            color: white;
+  
+            &:not(.is-current):hover {
+              background-color: darken(color('muted-dark'), 15%);
+            }
+  
+            &.is-current {
+              color: color('brand');
+  
+              &:before {
+                border-bottom-color: white;
+              }
+  
+            }
+
+          }
+
+        }
+
+        .nav__item--catalog {
+          display: block;
+        }
+
+      }
+
+      .nav__item--catalog {
+        display: none;
+      }
+
+    }
+
+    &__burger {
+      display: none;
+    }
+
+    &__nav {
+      display: block;
+      position: static;
+    }
+
+    &__nav-overlay {
+      display: none !important;
+    }
+
+  }
+
+  @include mq(desktop) {
+
+    &__logo {
+      width: 295px;
+    }
+
+    &__worktime {
+      display: block;
+    }
+
+  }
+
+  @include mq(wide) {
+
+    &__logo {
+      margin-right: 100px;
+    }
+
+  }
+
+}

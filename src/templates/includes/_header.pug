@@ -1,0 +1,232 @@
+header(class="header")
+
+
+
+  // top bar
+  div(class="header__top js-sticky-bar")
+    div(class="container")
+      div(class="header__top-inner")
+
+
+        // burger
+        div(class="header__burger")
+          button(type="button" class="burger btn" class="js-burger")
+            span(class="burger__inner")
+
+
+
+        // main nav
+        div(class="header__nav-container")
+
+
+          // overlay
+          div(class="header__nav-overlay js-nav-overlay")
+
+
+          // nav
+          nav(class="header__nav nav js-nav")
+
+
+            // list
+            ul(class="nav__list")
+
+
+              // item
+              li(class="nav__item")
+                span(class="nav__link is-current") Главная
+
+
+              // item
+              li(class="nav__item nav__item--catalog")
+                button(type="button" class="nav__link btn js-catalog-toggle") Каталог
+
+                div(class="js-catalog-cloned")
+
+
+              // item
+              li(class="nav__item")
+                a(href="" class="nav__link") О компании
+
+
+              // item
+              li(class="nav__item")
+                a(href="" class="nav__link") Оплата
+
+
+              // item
+              li(class="nav__item")
+                a(href="" class="nav__link") Доставка
+
+
+              // item
+              li(class="nav__item")
+                a(href="" class="nav__link") Гарантия
+
+
+              // item
+              li(class="nav__item")
+                a(href="" class="nav__link") Акции %
+
+
+              // item
+              li(class="nav__item")
+                a(href="" class="nav__link") Контакты
+
+
+
+        // account
+        div(class="header__account account-nav")
+
+
+          // list
+          ul(class="account-nav__list")
+
+
+            // item
+            li(class="account-nav__item")
+              a(href="" class="account-nav__link") Регистрация
+
+
+            // item
+            li(class="account-nav__item")
+              a(href="" class="account-nav__link") Войти
+
+
+
+        // product actions
+        div(class="header__top-actions product-actions product-actions--theme-alt")
+
+
+          // list
+          ul(class="product-actions__list")
+
+
+            // item
+            li(class="product-actions__item")
+              a(href="" class="product-actions__link" title="Избранное")
+                +icon('heart')
+                span(class="product-actions__counter") 0
+
+
+            // item
+            li(class="product-actions__item")
+              a(href="" class="product-actions__link" title="Сравнение")
+                +icon('files')
+                span(class="product-actions__counter") 0
+
+
+            // item
+            li(class="product-actions__item")
+              a(href="" class="product-actions__link" title="Корзина")
+                +icon('basket')
+                span(class="product-actions__counter") 2
+                span(class="product-actions__text") На сумму - <b>23&nbsp;140</b> руб.
+
+
+
+  // company
+  div(class="header__company")
+    div(class="header__company-inner container")
+
+
+      // logo
+      div(class="header__logo")
+        div(class="logo")
+          a(href="" class="logo__link")
+            img(src="images/logo.png" alt="Ювента-Крым" class="logo__image")
+          div(class="logo__desc") Официальный дистрибьютер в Крыму с 2005 года
+
+
+
+      // address
+      div(class="header__address")
+        | Ближайший магазин
+        br
+        b Симферополь
+        br
+        | ул. Маяковского 14-Э
+        +icon('marker')
+
+
+      // worktime
+      div(class="header__worktime")
+       | Пн. - Пт.:
+       br
+       b 09:00 - 18:00
+       br
+       | Выходные: 
+       br
+       | Сб. - Вс.
+       +icon('clock')
+
+
+      // contacts
+      div(class="header__contacts")
+        a(href="tel:+79787290215" class="header__contacts-phone") +7 (978) 
+          b 729-02-15
+        br
+        a(href="tel:+73652248231" class="header__contacts-phone") (3652) 
+          b 24-82-31
+        br
+        a(href="" class="header__contacts-callback") Обратный звонок
+        +icon('phone')
+
+
+
+  // catalog
+  div(class="header__catalog")
+    div(class="container")
+      div(class="header__catalog-inner")
+
+
+        // catalog button
+        div(class="header__catalog-btn")
+          button(type="button" class="toggle-catalog btn js-catalog-toggle") Каталог
+
+
+          // overlay
+          div(class="catalog__overlay js-catalog-overlay")
+
+
+          include ../includes/_catalog
+
+
+
+
+
+        // search
+        form(action="" class="header__search search form")
+          input(type="search" class="search__input input" name="search" placeholder="Что ищем?")
+          button(type="submit" class="search__submit btn" title="Найти")
+            +icon('search')
+
+
+
+        // product actions
+        div(class="header__actions product-actions product-actions--theme-base")
+
+
+          // list
+          ul(class="product-actions__list")
+
+
+            // item
+            li(class="product-actions__item")
+              a(href="" class="product-actions__link" title="Избранное")
+                +icon('heart')
+                span(class="product-actions__counter") 0
+
+
+            // item
+            li(class="product-actions__item")
+              a(href="" class="product-actions__link" title="Сравнение")
+                +icon('files')
+                span(class="product-actions__counter") 0
+
+
+            // item
+            li(class="product-actions__item")
+              a(href="" class="product-actions__link" title="Корзина")
+                +icon('basket')
+                span(class="product-actions__counter") 2
+                span(class="product-actions__text") На сумму - <b>23&nbsp;140</b> руб.

@@ -1,0 +1,36 @@
+/* ========================================================================== *\
+   =Blockquotes
+\* ========================================================================== */
+
+blockquote {
+  position: relative;
+  font-size: 20px;
+  font-style: italic;
+  padding: 10px 20px;
+  border-left: 4px solid lighten(color('muted'), 25%);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  small,
+  cite {
+    display: block;
+    color: color('muted');
+    text-align: left;
+
+    &:before {
+      content: '\2014 \00A0';
+    }
+
+  }
+
+}

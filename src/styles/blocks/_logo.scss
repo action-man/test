@@ -1,0 +1,35 @@
+/*--------------------------------------------------*\
+  =Logo
+\*--------------------------------------------------*/
+
+.logo {
+
+
+
+  /**
+   * Elements
+   */
+
+  &__link,
+  &__image {
+    display: block;
+  }
+
+  &__link {
+    border: 0;
+    background: none;
+    text-decoration: none;
+  }
+
+  &__image {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  &__desc {
+    font-size: 12px;
+    color: color('muted-dark');
+    margin-top: 8px;
+  }
+
+}

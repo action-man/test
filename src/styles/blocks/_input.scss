@@ -1,0 +1,51 @@
+/*--------------------------------------------------*\
+  =Input
+\*--------------------------------------------------*/
+
+.input {
+  appearance: none;
+  width: 100%;
+  box-shadow: none;
+  font-size: 13px;
+  font-family: font('base');
+  height: 32px;
+  line-height: 16px;
+  padding: em(6px, 13px) em(10px, 13px);
+  background-color: white;
+  border-radius: 0;
+  border: 2px solid color('muted-light');
+  color: color('text');
+  transition: border-color 100ms;
+
+  &[disabled] {
+    opacity: .5;
+  }
+
+  &.is-error,
+  .is-error & {
+    border-color: color('danger');
+  }
+
+  &:focus {
+    border-color: color('brand');
+  }
+
+  &:invalid {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-family: inherit;
+    color: color('muted');
+    opacity: 1;
+  }
+
+
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: none;
+  height: 110px;
+}

@@ -1,0 +1,58 @@
+/*--------------------------------------------------*\
+  =Price
+\*--------------------------------------------------*/
+
+.price {
+  position: relative;
+  display: inline-block;
+  background-color: color('brand');
+  padding: 3px 60px 3px 3px;
+  width: 100%;
+  max-width: 280px;
+
+  &:hover {
+    background-color: color('brand-light');
+  }
+
+
+  /**
+   * Elements
+   */
+
+  &__value {
+    position: relative;
+    display: block;
+    background-color: white;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 40px;
+    @include typi('h5');
+    font-weight: bold;
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: -6px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 6px solid #ffffff;
+    }
+
+  }
+
+  .icon {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    right: 18px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+}

@@ -1,0 +1,12 @@
+/*--------------------------------------------------*\
+  =Icon
+\*--------------------------------------------------*/
+
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  transform: scale(1);
+  transition: all $transition-base;
+  pointer-events: none;
+  @include size(1em);
+}

@@ -1,0 +1,121 @@
+// catalog
+div(class="catalog js-catalog js-tabs")
+
+
+  // top
+  div(class="catalog__top")
+
+
+    // toggle
+    div(class="catalog__toggle")
+      button(type="button" class="toggle-catalog btn is-active js-catalog-toggle") Каталог
+
+
+    // tabs
+    ul(class="catalog__tabs")
+      li(class="catalog__tabs-item")
+        a(class="catalog__tabs-link js-tabs-button" data-target="home") 
+          div(class="catalog__tabs-link-inner") Home &amp; Garden <span> / Бытовая&nbsp;техника</span>
+      li(class="catalog__tabs-item")
+        a(class="catalog__tabs-link js-tabs-button" data-target="prof")
+          div(class="catalog__tabs-link-inner") Professional <span> / Профессиональная&nbsp;техника</span>
+
+
+  // pane
+  div(class="catalog__pane js-tabs-pane" data-pane="home")
+
+
+    // main
+    div(class="catalog__main")
+
+
+      // categories
+      div(class="catalog__cats")
+
+
+        // list
+        ul(class="catalog__cats-list")
+
+
+          each value, index in ['Аппараты высокого давления', 'Пылесосы', 'Системы полива и орошения', 'Ручные подметальные машины', 'Насосы', 'Электровеники', 'Пароочистители', 'Гладильные системы', 'Паропылесосы', 'Стеклоочиститель', 'Полотер', 'Поломоечная машина']
+
+
+            // item
+            li(class="catalog__cats-item")
+              a(href="" class="catalog__cats-link" data-title=`${value}`)
+                div(class="catalog__cats-link-image image-box")
+                  img(src=`images/catalog/${index + 1}.jpg` alt="")
+                div(class="catalog__cats-link-title")= value
+
+
+    // panel
+    div(class="catalog__panel")
+
+
+      // categories
+      div(class="catalog__cats")
+
+
+        // list
+        ul(class="catalog__cats-list")
+
+
+          each value, index in ['Принадлежности', 'Для чистки и ухода']
+
+
+            // item
+            li(class="catalog__cats-item")
+              a(href="" class="catalog__cats-link" data-title=`${value}`)
+                div(class="catalog__cats-link-image image-box")
+                  img(src=`images/catalog/panel/${index + 1}.jpg` alt="")
+                div(class="catalog__cats-link-title")= value
+
+
+  // pane
+  div(class="catalog__pane js-tabs-pane" data-pane="prof")
+
+
+    // main
+    div(class="catalog__main")
+
+
+      // categories
+      div(class="catalog__cats")
+
+
+        // list
+        ul(class="catalog__cats-list")
+
+
+          each value, index in ['Аппараты высокого давления', 'Пылесосы', 'Системы полива и орошения', 'Ручные подметальные машины', 'Насосы', 'Электровеники', 'Пароочистители', 'Гладильные системы', 'Паропылесосы', 'Стеклоочиститель']
+
+
+            // item
+            li(class="catalog__cats-item")
+              a(href="" class="catalog__cats-link" data-title=`${value}`)
+                div(class="catalog__cats-link-image image-box")
+                  img(src=`images/catalog/${index + 1}.jpg` alt="")
+                div(class="catalog__cats-link-title")= value
+
+
+    // panel
+    div(class="catalog__panel")
+
+
+      // categories
+      div(class="catalog__cats")
+
+
+        // list
+        ul(class="catalog__cats-list")
+
+
+          each value, index in ['Принадлежности', 'Для чистки и ухода']
+
+
+            // item
+            li(class="catalog__cats-item")
+              a(href="" class="catalog__cats-link" data-title=`${value}`)
+                div(class="catalog__cats-link-image image-box")
+                  img(src=`images/catalog/panel/${index + 1}.jpg` alt="")
+                div(class="catalog__cats-link-title")= value

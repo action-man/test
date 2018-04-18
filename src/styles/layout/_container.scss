@@ -1,0 +1,24 @@
+/*--------------------------------------------------*\
+  =Container
+\*--------------------------------------------------*/
+
+.container {
+  max-width: $container-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: content-box;
+
+
+
+  /**
+   * MQ
+   */
+
+  @include mq(smart) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}

@@ -1,0 +1,105 @@
+/*--------------------------------------------------*\
+  =Lists
+\*--------------------------------------------------*/
+
+
+
+/**
+ * Common styles
+ */
+
+ul, ol {
+
+  &:not([class]) {
+    list-style-position: inside;
+
+    ul, ol {
+      margin-bottom: 0;
+    }
+
+  }
+
+}
+
+
+
+/**
+ * Definition list
+ */
+
+dl:not([class]) {
+
+}
+
+dt:not([class]) {
+  font-weight: bold;
+}
+
+dd:not([class]) {
+  padding-left: 15px;
+}
+
+
+
+/**
+ * Ordered list
+ */
+
+ol:not([class]) {
+  list-style-type: none;
+  counter-reset: list1;
+  padding-left: 15px;
+
+  li {
+
+    &:before {
+      counter-increment: list1;
+      content: counter(list1) ". ";
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  ol {
+    counter-reset: list2;
+
+    li {
+
+      &:before {
+        counter-increment: list2;
+        content: counter(list1) "." counter(list2) ". ";
+      }
+
+    }
+
+    ol {
+      counter-reset: list3;
+
+      li {
+
+        &:before {
+          counter-increment: list3;
+          content: counter(list1) "." counter(list2) "." counter(list3) ". ";
+        } 
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+/**
+ * Unordered list
+ */
+
+ul:not([class]) {
+  list-style-type: disc;
+  padding-left: 15px;
+}

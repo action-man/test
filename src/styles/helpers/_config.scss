@@ -1,0 +1,103 @@
+// Colors
+$colors: (
+  'brand':       #ffec00,
+  'brand-light': #fff465, 
+
+  'muted':       #cccccc,
+  'muted-light': #ededed,
+  'muted-dark':  #6e6e6e,
+  'danger':      #ed2129,
+  'text':        #000000,
+  'success':     #14c149,
+
+  'twitter':     #1da1f2,
+  'facebook':    #3b5998,
+  'vk':          #507299,
+  'gplus':       #dd4b39,
+  'instagram':   #c13584
+);
+
+
+// Fonts
+$fonts: (
+  'base': (Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
+  'monospace': ("SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace)
+);
+
+
+// Base typography
+$typography: (
+  'font-family':          font('base'),
+  'font-size':            14px,
+  'line-height':          1.2857,
+  'line-height-computed': 14px * 1.2857
+);
+
+
+
+// Sass rem settings
+$rem-baseline: 14px;
+
+
+
+// Project
+$container-width:  1200px;
+$transition-base:  150ms;
+$staticMenuShow:   'desktop';
+
+
+
+// Breakpoints
+$breakpoints: (
+  mobile:  320px,
+  smart:   480px,
+  phablet: 600px,
+  tablet:  760px,
+  desktop: 970px,
+  wide:    1200px
+);
+
+
+// Sass MQ settings
+$mq-breakpoints: $breakpoints;
+
+
+
+$typi: (
+  small: (
+    null: 12px
+  ),
+  base: (
+    null: 14px
+  ),
+  h1: (
+    null: 24px,
+    phablet: 28px,
+    desktop: 30px
+  ),
+  h2: (
+    null: 22px,
+    phablet: 24px,
+    desktop: 26px
+  ),
+  h3: (
+    null: 20px,
+    phablet: 22px,
+    desktop: 24px
+  ),
+  h4: (
+    null: 18px,
+    phablet: 20px,
+    desktop: 22px
+  ),
+  h5: (
+    null: 16px,
+    phablet: 18px,
+    desktop: 20px
+  ),
+  h6: (
+    null: 14px,
+    phablet: 16px,
+    desktop: 18px
+  )
+);

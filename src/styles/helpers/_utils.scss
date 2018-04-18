@@ -1,0 +1,72 @@
+/*--------------------------------------------------*\
+  =Utils
+\*--------------------------------------------------*/
+
+.u-highlight {
+  color: color('brand') !important;
+}
+
+.u-muted {
+  color: color('muted-dark') !important;
+}
+
+.u-danger {
+  color: color('danger') !important;
+}
+
+.u-success {
+  color: color('success') !important;
+}
+
+.u-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.u-hidden {
+  display: none !important;
+}
+
+.u-text-left {
+  text-align: left !important;
+}
+
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-text-right {
+  text-align: right !important;
+}
+
+.u-nowrap {
+  white-space: nowrap !important;
+}
+
+.u-expand {
+  width: 100%;
+}
+
+
+
+/**
+ * Useful for vertical alignment in table cells
+ */
+
+ .u-v-top {
+  vertical-align: top !important;
+}
+
+.u-v-middle {
+  vertical-align: middle !important;
+}
+
+.u-v-bottom {
+  vertical-align: bottom !important;
+}

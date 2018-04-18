@@ -1,0 +1,47 @@
+include ../mixins/_icon
+include ../mixins/_image-placeholder
+include ../mixins/_breadcrumbs
+include ../mixins/_back
+
+
+doctype html
+html(lang="ru")
+
+  head
+    title Ювента-Крым
+
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    link(rel="icon" href="images/favicon.ico" type="image/x-icon")
+    link(rel="stylesheet" href="styles/app.bundle.css")
+
+    block scripts
+      script(src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find")
+      script(src="scripts/app.bundle.js")
+
+
+  body(class="is-disabled-transition")
+
+
+
+    // header
+    include ../includes/_header
+
+
+
+    // breadcrumbs
+    block breadcrumbs
+
+
+
+    // main
+    main(class="main")
+
+
+      // content
+      div(class="content")
+
+
+        block content

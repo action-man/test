@@ -1,0 +1,19 @@
+/*--------------------------------------------------*\
+  =Availability
+\*--------------------------------------------------*/
+
+.availability {
+  position: relative;
+  padding-left: 27px;
+  font-size: 12px;
+  color: color('muted-dark');
+
+  .icon {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    fill: black;
+    @include size(18px);
+  }
+
+}

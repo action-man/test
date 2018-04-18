@@ -1,0 +1,64 @@
+/*--------------------------------------------------*\
+  =Breadcrumbs
+\*--------------------------------------------------*/
+
+.breadcrumbs {
+  display: none;
+  @include typi('small');
+
+
+
+  /**
+   * Elements
+   */
+
+  &__inner {
+    padding-top: 15px;
+    padding-bottom: 11px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 4px;
+    margin-right: 6px;
+    padding-right: 12px;
+    background: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 582 998' xml:space='preserve' fill='%23cccccc'%3E%3Cpath d='M582,499c0,8.67-3.33,16.33-10,23L106,988c-6.67,6.67-14.33,10-23,10s-16.33-3.33-23-10l-50-50c-6.67-6.67-10-14.33-10-23 s3.33-16.33,10-23l393-393L10,106C3.33,99.33,0,91.67,0,83s3.33-16.33,10-23l50-50C66.67,3.33,74.33,0,83,0s16.33,3.33,23,10 l466,466C578.67,482.67,582,490.33,582,499z'/%3E%3C/svg%3E") no-repeat 100% 49%;
+    background-size: 5px 8px;
+
+    &:last-child {
+      background: none;
+      padding-right: 0;
+    }
+
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: color('muted-dark');
+  }
+
+
+
+  /**
+   * MQ
+   */
+  
+  @include mq(phablet) {
+    display: block;
+  }
+
+}
+
+a.breadcrumbs__link:hover {
+  text-decoration: none;
+  color: color('text');
+}
+
+span.breadcrumbs__link {
+  color: color('muted');
+}

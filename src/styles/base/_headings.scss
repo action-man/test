@@ -1,0 +1,50 @@
+/*--------------------------------------------------*\
+  =Headings
+\*--------------------------------------------------*/
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: font('regular');
+  font-weight: bold;
+  line-height: 1.2;
+  margin: rem(typ('line-height-computed') * 2) 0 rem(typ('line-height-computed') * 1.25);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+h1, .h1 {
+  @include typi('h1');
+  font-weight: 900;
+}
+
+h2, .h2 {
+  @include typi('h2');
+  font-weight: 900;
+}
+
+h3, .h3 {
+  @include typi('h3');
+}
+
+h4, .h4 {
+  @include typi('h4');
+}
+
+h5, .h5 {
+  @include typi('h5');
+}
+
+h6, .h6 {
+  @include typi('h6');
+}

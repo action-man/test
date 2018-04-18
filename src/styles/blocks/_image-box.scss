@@ -1,0 +1,17 @@
+/*--------------------------------------------------*\
+  =Image Box
+\*--------------------------------------------------*/
+
+.image-box {
+  display: block;
+  position: relative;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    height: auto;
+  }
+
+}
